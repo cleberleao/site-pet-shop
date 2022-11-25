@@ -83,10 +83,10 @@ logotipo
 =========================
 */
 	header h1 a{
-		background:url(../img/logo-criar-site-responsivo.png) no-repeat ; 
+		background:url(../img/logo-pet-shop.png) no-repeat ; 
 		display:block;
 		float:left; 
-		height:139px;
+		height:145px;
 		text-indent:-9999; 
 		width:38.333%; /* 700px a 1200px = 0.58333333333333 x 100 = 58.333333333333%*/
 	}
@@ -139,7 +139,11 @@ nav{
 		margin: 0 auto;
 		width:75%; /* 900px a 1200px = 0.75 x 100 = 75%*/
 	}
+/* foto da fachada
+.foto-fachada{
+	 border-radius: 15px 50px;
 
+} */
 .meio{
 	background-color:#0ac3fe;
 	height: 437px;
@@ -177,8 +181,11 @@ nav{
 	font-size: 1.778em;
 	font-weight: 300;
 	letter-spacing: -0.0625em;
-	margin-bottom: 30px;
+	margin-top: -4px;
 	text-shadow:none;
+	background-color:#ccc;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 .meio p {
 	background-color:#ffffff;
@@ -215,21 +222,14 @@ span.botao{
 	width: 33.333%;
 	text-shadow: none;
 }
-footer{
-	clear: both;
-	height: 50px;
-	padding: 10px 0;
-	width: 100%;
-}
-.copyleft{
-	float: left;
-	margin-left: 2.5%;
-}
-.desenvolvedor{
-	float:right
-}
-.desenvolvedor figure{
+.mapa{
 	width:100%;
+	height: 100%;
+}
+.meio-mapa{
+	height: 380px;
+	width:100%;
+	background-color:#0ac3fe;
 }
 .meio-contato{
 	background-color:#0ac3fe;
@@ -248,7 +248,7 @@ footer{
 }
 form {
   margin: 0 auto;
-  width: 400px;
+  width: 95%;
   padding: 1em;
   border: 1px solid #000;
   border-radius: 1em;
@@ -269,7 +269,7 @@ label {
 
 input, textarea {
   font: 1em "Open Sans", sans-serif;
-  width: 300px;
+  width: 89%;
   box-sizing: border-box;
   border: 1px solid #000;
 }
@@ -277,6 +277,7 @@ input, textarea {
 input:focus, textarea:focus {
   border-color: #000;
 }
+
 textarea {
   vertical-align: top;
   height: 5em;
@@ -287,12 +288,60 @@ textarea {
 button {
   margin-left: .5em;
 }
-.volta-topo{
-	text-align: right;
+
+footer{
+	clear: both;
+	padding: 10px 0;
 	width: 100%;
-	margin-bottom: 30px;
+}
+.copyleft{
+	float: left;
+	margin-left: 2.5%;
+}
+.social{
+    float: right;
+}
+.social figure{
+    width: 100%;
+}
+.social img{
+    width: 40px;
 }
 
+.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: -10px;
+    z-index: 1;
+    padding-top: 5px;
+
+}
+/*
+.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: -10px;
+    z-index: 1;
+    width: 60px;
+    background-color:  #027e02;
+    padding-top: 5px;
+    border-radius: 50%;
+}*/
+.whatsapp img{
+    padding-left: 10px;
+    width: 60px;
+    z-index: 2;
+}
+.volta-topo{
+    position: relative;
+    bottom: 25px;
+	left:-395px;
+    padding-top: 0px;
+}
+
+.volta-topo img{
+    width: 40px;
+}
 @media screen and (max-width: 999px){
 	h2, a , a:link, a:visited{
 		color: #228b22;
@@ -364,6 +413,12 @@ button {
 	span.botao a{
 		padding: 2px 3.333%;
 	}
+	.volta-topo{
+    position: relative;
+    bottom: 25px;
+	left:-355px;
+    padding-top: 0px;
+}
 }
 
 @media screen and (max-width: 630px){
@@ -436,6 +491,10 @@ button {
 		padding:0;
 		width: 100%;
 	}
+	.meio-contato{
+		padding-top:5%;
+		width: 100%;
+	}
 	.meio .desktop, .meio .tablet, .meio .mobile{
 		float: none;
 		height: 160px;
@@ -443,32 +502,62 @@ button {
 	}
 	.meio .desktop figure, .meio .tablet figure, .meio .mobile figure{
 		float: left;
-		height: 160px;
+		height: 150px;
 		margin:0;
 		padding: 0;
 		width: 53.125%
 	}
 	.meio h3{
-		float: left;
-		margin-top: 40px;
-		width: 46.875%
+		float: right;
+		width: 26.875%;
+		font-size: 0.878em;
+		margin-left: 0;
+		margin-top: 50px;
 	}
 	.meio .desktop figure img, .meio .tablet figure img, .meio .mobile figure img{
 		height: 125px;
-		margin-top: 15px;
+
 		width: 86.274%;
 	}
 	.meio p{
 		display: none;
 	}
-	.copyleft, .desenvolvedor{
+	.copyleft, .social{
 		float: none;
 		margin: 0;
 		padding: 0;
 		text-align: center;
 	}
-	.desenvolvedor figure{
-		width: inherit;
+	.social figure{
+		padding-top:10px
+	}
+	.volta-topo{
+		display:none;
+	}
+	.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 1;
+    padding-top: 5px;
+
+	}
+	.whatsapp img{
+		padding-left: 10px;
+		width: 60px;
+		z-index: 2;
+	}
+	.mapa{
+		margin-top:10px;
+		height: 300px;
+	}
+	.meio-mapa{
+		margin-top:10px;
+		height: 380px;
+	}
+	form {
+		height: 100%;
+		width: 75%;
 	}
 }
 @media screen and (max-width:319px){
@@ -530,7 +619,30 @@ button {
 	.meio p{
 		display: none;
 	}
-	.copyleft{
-		font-size: 0.91em;
+	.copyleft, .social{
+		float: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.social figure{
+		padding-top:10px
+	}
+	.volta-topo{
+		display:none;
+	}
+	.whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: -5px;
+    z-index: 1;
+    padding-top: 5px;
+	}
+	.mapa{
+		height: 300px;
+	}
+	form {
+		height: 100%;
+		width: 75%;
 	}
 }
