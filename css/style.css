@@ -246,6 +246,9 @@ span.botao{
 	text-shadow:none;
 	text-align: center;
 }
+.cor-icone{
+	color: red
+}
 form {
   margin: 0 auto;
   width: 95%;
